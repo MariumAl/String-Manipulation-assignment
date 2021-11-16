@@ -1,0 +1,14 @@
+declare count : integer
+count <- 0
+
+print "Enter number of donuts:"
+input count
+IF count <= 9 and >= "0" 
+Then 
+print "Number of donuts:", count
+Else If count>= "10" 
+Then 
+print "Number of donuts: Many."
+Else print "invalid input."
+END IF
+end
