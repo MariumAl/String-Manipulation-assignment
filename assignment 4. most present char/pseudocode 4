@@ -1,0 +1,35 @@
+declare most : integer
+declare str1 : string
+declare mostChar : character
+declare thisChar : character
+declare nextChar : character
+declare x : integer
+declare y : integer
+most <- 0
+mostChar <- ""
+str1 <- ""
+nextChar <- ""
+thisChar <- ""
+x <- 0
+y <- 0
+
+print "Enter Phrase: "
+input str1
+
+for x <- 1 to length(str1)
+    nextChar <- mid(str1, x, 1)
+    count <- 0
+    for y <- 1 to length(str1)
+        thisChar <- mid(str1, y, 1)
+        if thisChar = nextChar
+        then
+         count <- count + 1
+        end if
+
+    if count > most 
+       then
+        most <- count
+        mostChar <- nextChar
+
+print(mostChar, "appreared", most, "number of times.")
+end
