@@ -1,0 +1,19 @@
+Declare str1 : string
+declare lastChars : string
+str1 <- ""
+lastChars <- ""
+
+print "Input string to process: "
+input str1
+lastChars <- Right(str1, 3)
+        
+If Length(str1) < 3 
+Then
+print "Processed string: " + str1
+ ElseIf lastChars = "ing"
+ Then
+ Print "Processed string : " + str1 + "ly"
+  Else
+ Print "Processed string: " + str1 + "ing")
+End If
+END
