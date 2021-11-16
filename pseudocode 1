@@ -1,0 +1,27 @@
+DECLARE str1 : string
+DECLARE str2 : string
+DECLARE thisChar : character
+DECLARE Count : integer
+DECLARE isPangram : boolean
+str1 <- ""
+str2 <- "QWERTYUIOPLKJHGFDSAZXCVBNM"
+thisChar <- ''
+Count <- 0
+isPangram <- TRUE
+print "enter string to validate:"
+input str1
+For Count <- 1 to LENGTH(Str2)
+    thisChar <- MID(alphaChar, Count, 1)
+    IF locate(Upper(str1), thisChar) = 0
+      THEN
+        isPangram <- False
+        EXIT FOR
+    END IF
+END FOR
+
+IF isPangram = True
+  THEN
+    print "All alphabets are present in string."
+  ELSE
+    print "All alphabets are not present in string."
+END IF
