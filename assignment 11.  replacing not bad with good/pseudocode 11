@@ -1,0 +1,18 @@
+Declare str1 : String
+Declare begstr : string
+Declare endstr : string
+str1 <- ""
+begstr <- ""
+endstr <- ""
+print "Enter string to process: "
+input str1
+If LOCATE(str1, "not") < LOCATE(str1, "bad")
+ Then
+   begstr = Left(str1, LOCATE(str1, "not") - 1)
+   endstr = Right(str1, Length(str1) - LOCATE(str1, "bad") - 2)
+   print " Processed string: " + begstr + "good" + "endstr"
+else 
+print "Processed string: " + str1
+END IF
+
+end
