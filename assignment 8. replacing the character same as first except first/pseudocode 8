@@ -1,0 +1,30 @@
+declare str1 : string
+declare str2: string 
+declare thisChar: character
+declare nextChar : character
+declare x : integer
+
+x <- 0
+str1 = ""
+str2 = ""
+thisChar= ''
+nextChar = ''
+
+print "Input string to process:"
+input str1
+thisChar = MID(str1, 1, 1)
+
+fOR x = 2 to Length(str1)
+nextChar = MID(str1, x, 1)
+
+If nextChar= thisChar
+Then
+nextChar = '*'
+Else nextChar = Mid(str1, x, 1)
+END IF
+str2 = str2 + nextChar
+NEXT
+
+str2 = thisChar + str2
+print "Processed string: ", str2
+END
