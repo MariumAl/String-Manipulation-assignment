@@ -1,0 +1,32 @@
+declare str1,: string
+declare str2 : string
+declare thischar : character
+declare char1 : character
+delare char2 : character
+declare count : integer
+
+str1 <- ""
+str2 <- ""
+thischar <- ''
+char1 <- ''
+char2 <- ''
+count <- 0
+
+print "Enter string to process: "
+input str1
+print "Enter character to replace: "
+input char1
+print "Enter charcter to replace with: "
+input char2
+for count <- 1 to length(str1)
+thischar <- mid(str1, count, 1)
+IF thischar = char1 
+ THEN
+  thischar = char2
+END IF
+str2 <- str2 & thischar
+next
+print "proccesed string is:"
+output str2
+END
+
