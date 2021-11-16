@@ -1,0 +1,42 @@
+Declare str1 : String
+        Declare count : Integer
+        Declare char1 : Character
+        Declare alphaCount: Integer
+        Declare digCount : Integer
+        Declare specCount : Integer
+        Declare x : Integer
+        str1 <- ""
+        count <- 0
+        char1 <- ''
+        x <- 0
+        alphaCount <- 0
+        digCount <- 0
+        specCount <- 0
+        thischar <- ''
+        
+        print "Enter string text: "
+        input str1
+
+       print "enter charcter to search: "
+       input char1
+       For x <- 1 To Length(str1)
+            thischar <- Mid(str1, x, 1)
+            If Upper(thischar) = Upper(char1) Then
+                count <- count + 1
+            End If
+            If Asc(thischar) >= Asc('A') And Asc(thischar) <= Asc('Z') Or
+             Asc(thischar) >= Asc('a') And Asc(thischar) <= Asc('z') 
+              Then
+                alphaCount <- alphaCount + 1
+            ElseIf thischar >= "0" And thischar <= "9" 
+              Then
+                digCount <- digCount + 1
+            Else : specCount <- specCount + 1
+            End If
+        Next
+
+        print "Number of times character appeared: " + output count
+        print "number of alphabets: " + output alphaCount 
+        print "Number of digits: " + digCount
+        print "Number of special characters: " + output specCount
+        
