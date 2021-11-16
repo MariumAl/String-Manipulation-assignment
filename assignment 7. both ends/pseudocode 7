@@ -1,0 +1,19 @@
+ Declare str1 : String
+        Declare char1 : string
+        Declare char2 : string
+      
+        str1 <- ""
+        char1 <- ""
+        char2 <- ""
+        Print "Input string: "
+        Input str1
+        char1 <- Mid(str1, 1, 2)
+        char2 <- Right(str1, 2)
+
+        If Length(str1) < 2 
+         Then
+            print str1
+        Else 
+        Print "processed string: " + char1 + char2
+        End If
+        end
